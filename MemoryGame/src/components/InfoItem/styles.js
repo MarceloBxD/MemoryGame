@@ -7,8 +7,9 @@ export const Container = styled.div`
 
 export const Label = styled.div`
     font-weight: bold;
-    font-size: 20px;
+    font-size: 40px;
 `
 
 export const Value = styled.div`
+    font-size: 30px;
 `

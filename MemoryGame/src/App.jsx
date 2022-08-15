@@ -13,8 +13,8 @@ function App() {
         </C.LogoImg>
         
         <C.spaceInfo>
-          <InfoItem label="Tempo" value="00:00"/>
-          <InfoItem label="Moves Count" value="0"/>
+          <InfoItem label="Tempo" className="label1" value="00:00"/>
+          <InfoItem label="Moves" className="label2" value="0"/>
         </C.spaceInfo>
 
       <C.Button>Reiniciar</C.Button>
