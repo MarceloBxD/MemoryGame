@@ -14,20 +14,15 @@ export const Infos = styled.div`
     justify-content: center;
 `
 
-export const spaceGrid= styled.div`
-    display: grid;
-    height: 100%;
-    margin: 0 50px;
-`
 export const LogoImg = styled.div`
 
 `
 
 export const Grid = styled.div`
-    width: 550px;
+    width: 750px;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 15px;
+    gap: 20px;
     margin-left: 30px;
     align-items: center;
     justify-content: center;    

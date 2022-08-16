@@ -6,6 +6,7 @@ import { Button } from './components/Button'
 import { items } from './data/items'
 import ResetIcon from './assets/refresh-icon-free-vector.jpg'
 import memoryLogo from '../src/assets/logo.jpg'
+import { formatTipeElapsed } from './helpers/formatTipeElapsed'
 
 function App() {
 
@@ -16,6 +17,15 @@ function App() {
   const [gridItems, setGridItems] = useState([]);
 
   useEffect(() => resetAndCreateGrid(), []);
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      if(playing){
+        setTimeElapsed(timeElapsed + 1);
+      }
+  }, 1000)
+  return () => clearInterval(timer);
+  }, [playing, timeElapsed]);
 
   const handleItemClick = (index) => {
     
@@ -56,11 +66,11 @@ function App() {
     <C.Container>
       <C.Infos>
         <C.LogoImg>
-          <img src={memoryLogo} width="200px" alt="MemoryGameLogo" />
+          <img src={memoryLogo} alt="MemoryGameLogo" />
         </C.LogoImg>
         
         <C.spaceInfo>
-          <InfoItem label="Time" className="label1" value="00:00"/>
+          <InfoItem label="Time" className="label1" value={formatTipeElapsed(timeElapsed)}/>
           <InfoItem label="Moves" className="label2" value="0"/>
         </C.spaceInfo>
 
