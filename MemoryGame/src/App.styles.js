@@ -2,9 +2,11 @@ import styled from 'styled-components'
 
 export const Container = styled.div`
     width: 100%;
+    height: 100%;
     max-width: 750px;
     display: flex;
     margin: 0 auto;
+    margin-top: 100px;s
 `
 export const Infos = styled.div`
     display: flex;
@@ -12,32 +14,28 @@ export const Infos = styled.div`
     justify-content: center;
 `
 
-export const Button = styled.div`
-    border-radius: 8px;
-    margin-top: 30px;
-    padding: 5px;
-    cursor: pointer;
-    background-color: #0f9;
-    display: flex;
-    justify-content: center;
-    color: #fff;
-    :hover{
-        opacity: 0.4;
-        transition: ease-in-out 0.2 linear;
-    }
-`
-
 export const spaceGrid= styled.div`
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    height: 100%;
     margin: 0 50px;
 `
 export const LogoImg = styled.div`
 
 `
 
+export const Grid = styled.div`
+    width: 550px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    margin-left: 30px;
+    align-items: center;
+    justify-content: center;    
+`
+
 export const spaceInfo = styled.div`
     display: flex;
+    flex-direction: column;
     gap: 20px;
     justify-content: center;
     align-items: center;
